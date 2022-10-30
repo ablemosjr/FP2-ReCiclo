@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 /**
  *
  * @author suporte
@@ -14,6 +17,17 @@ public class TelaLoading extends javax.swing.JFrame {
      * Creates new form TelaLoading
      */
     public TelaLoading() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+        }
         initComponents();
         AdminLoginView login = new AdminLoginView();
        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
@@ -99,8 +113,9 @@ public class TelaLoading extends javax.swing.JFrame {
         testConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
 
-        ProgressBar.setBackground(new java.awt.Color(160,205,96));
-        ProgressBar.setForeground(new java.awt.Color(160,205,96));
+        ProgressBar.setBackground(new java.awt.Color(160, 205, 96));
+        ProgressBar.setForeground(new java.awt.Color(160, 205, 96));
+        ProgressBar.setStringPainted(true);
         jPanel1.add(ProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, -1, 30));
 
         lblStatus.setBackground(new java.awt.Color(160, 205, 96));
