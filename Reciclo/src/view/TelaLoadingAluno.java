@@ -127,7 +127,7 @@ public class TelaLoadingAluno extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLoadingAluno().setVisible(true);
+                new TelaGeradoPontosView().setVisible(true);
                 
             }
         });
