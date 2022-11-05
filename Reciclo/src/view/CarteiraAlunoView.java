@@ -249,7 +249,9 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReciclarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciclarActionPerformed
-
+        TelaLoadingReciclando loadingreciclando = new TelaLoadingReciclando();
+        this.setVisible(false);
+        loadingreciclando.setVisible(true);
        
     }//GEN-LAST:event_btnReciclarActionPerformed
 
