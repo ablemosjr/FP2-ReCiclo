@@ -11,25 +11,25 @@ import javax.swing.UnsupportedLookAndFeelException;
  *
  * @author suporte
  */
-public class TelaLoading extends javax.swing.JFrame {
+public class TelaLoadingAluno extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaLoading
      */
-    public TelaLoading() {
+    public TelaLoadingAluno() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(TelaLoading.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
         }
         initComponents();
-        AdminLoginView login = new AdminLoginView();
+        CarteiraAlunoView carteira = new CarteiraAlunoView();
        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -62,7 +62,7 @@ public class TelaLoading extends javax.swing.JFrame {
                     }
                 }
                     dispose();
-                    login.setVisible(true);
+                    carteira.setVisible(true);
             }catch(InterruptedException ex){
                
             }
@@ -99,7 +99,7 @@ public class TelaLoading extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(480, 800));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RecicloLogo_Admin.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RecicloLogo_User.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
 
         testConnectionFail.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -155,20 +155,21 @@ public class TelaLoading extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoadingAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoadingAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoadingAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoadingAluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLoading().setVisible(true);
+                new TelaLoadingAluno().setVisible(true);
                 
             }
         });
