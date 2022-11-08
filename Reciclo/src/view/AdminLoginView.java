@@ -32,14 +32,13 @@ public class AdminLoginView extends javax.swing.JFrame {
         btnLogin = new view.projectButton();
         jLabel4 = new javax.swing.JLabel();
         tfAdminPassword = new javax.swing.JPasswordField();
-        testConnectionFail = new javax.swing.JLabel();
         testConnection = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(480, 800));
         setName("AdminLoginView"); // NOI18N
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -122,19 +121,24 @@ public class AdminLoginView extends javax.swing.JFrame {
         tfAdminPassword.setForeground(new java.awt.Color(160, 205, 96));
         tfAdminPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfAdminPassword.setBorder(null);
+        tfAdminPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAdminPasswordActionPerformed(evt);
+            }
+        });
         jPanel1.add(tfAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 240, 50));
 
-        testConnectionFail.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testConnectionFail.setForeground(new java.awt.Color(255, 51, 51));
-        testConnectionFail.setToolTipText("");
-        testConnectionFail.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(testConnectionFail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
-
+        testConnection.setBackground(new java.awt.Color(60, 60, 60));
         testConnection.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testConnection.setForeground(new java.awt.Color(160, 205, 96));
+        testConnection.setForeground(new java.awt.Color(255, 0, 0));
+        testConnection.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         testConnection.setToolTipText("");
         testConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
+        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 470, 30));
+
+        jSeparator3.setBackground(new java.awt.Color(60, 60, 60));
+        jSeparator3.setForeground(new java.awt.Color(70, 70, 70));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 480, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,9 +168,14 @@ public class AdminLoginView extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         
         //TODO
+        
         // Teste de login
         String user = "admin";
         String pass = "admin";
+        
+        AdminHistoryView homeAdmin = new AdminHistoryView();
+        
+        testConnection.setText("");
         
         try {   
             // Fazer abrir conexao com bd aqui e processos
@@ -174,17 +183,22 @@ public class AdminLoginView extends javax.swing.JFrame {
             String username = tfAdminLogin.getText();
             String password = tfAdminPassword.getText();
             
-            if(username.equals(user) && password.equals(pass)) {
-                testConnectionFail.setText("");
-                testConnection.setText("CONNECT");
+            if(username.equals(user) && password.equals(pass)) {       
+                this.setVisible(false);
+                homeAdmin.setVisible(true);
+                
             } else {
-                testConnection.setText("");
-                testConnectionFail.setText("Invalid login or password!");
+                testConnection.setText("Invalid login or password!");
             }    
+            
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void tfAdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAdminPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAdminPasswordActionPerformed
 
     public static void main(String args[]) {
 
@@ -207,8 +221,8 @@ public class AdminLoginView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel testConnection;
-    private javax.swing.JLabel testConnectionFail;
     private javax.swing.JTextField tfAdminLogin;
     private javax.swing.JPasswordField tfAdminPassword;
     // End of variables declaration//GEN-END:variables

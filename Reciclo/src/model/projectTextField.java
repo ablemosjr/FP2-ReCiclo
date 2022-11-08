@@ -1,13 +1,14 @@
 
 package model;
 
+
+import javax.swing.JTextField;
+
 /**
  *
  * @author Alessandro Lemos Jr
  * @since Release 2
  */
-
-import javax.swing.JTextField;
 
 public class projectTextField extends JTextField {
 
