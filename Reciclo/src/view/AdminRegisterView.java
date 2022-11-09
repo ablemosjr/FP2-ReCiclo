@@ -2,8 +2,6 @@
 package view;
 
 import java.awt.Color;
-import javax.swing.border.Border;
-import model.projectTextField;
 
 /**
  *
@@ -13,9 +11,6 @@ import model.projectTextField;
 
 public class AdminRegisterView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminRegisterView
-     */
     public AdminRegisterView() {
         initComponents();
     }
@@ -52,6 +47,7 @@ public class AdminRegisterView extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(480, 800));
         setMinimumSize(new java.awt.Dimension(480, 800));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
@@ -205,7 +201,7 @@ public class AdminRegisterView extends javax.swing.JFrame {
 
         testRegister.setBackground(new java.awt.Color(60, 60, 60));
         testRegister.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testRegister.setForeground(new java.awt.Color(80, 80, 80));
+        testRegister.setForeground(new java.awt.Color(150, 150, 150));
         testRegister.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         testRegister.setToolTipText("");
         testRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -228,8 +224,7 @@ public class AdminRegisterView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        
-        // TODO
+
         AdminHistoryView homeAdmin = new AdminHistoryView();
         
         this.setVisible(false);
@@ -241,8 +236,8 @@ public class AdminRegisterView extends javax.swing.JFrame {
         tfNameRegister.setText("");
         tfEmailRegister.setText("");
         tfUserRegister.setText("");
-        tfPassRegister_NOUSE.setText("");
-        tfConfirmPassRegister_NOUSE.setText("");
+        tfPassRegister.setText("");
+        tfConfirmPassRegister.setText("");
         
     }//GEN-LAST:event_btnClearActionPerformed
 
@@ -257,20 +252,26 @@ public class AdminRegisterView extends javax.swing.JFrame {
         String passConfirm = tfConfirmPassRegister.getText();
         
         if(name.equals("Fulano")) {
-            testRegister.setText("Name already registered!");
+            testRegister.setText("Nome já registrado");
             
         }else if(email.equals("test@test.com")) {
-            testRegister.setText("E-mail already registered!");
+            testRegister.setText("E-mail já registrado");
             
         }else if(user.equals("admin")) { 
-            testRegister.setText("User already registered!");
+            testRegister.setText("Usuário já registrado");
 
         }else if(!(pass.equals(passConfirm))) {
-            testRegister.setText("Different passwords, insert the same passwords.");
+            testRegister.setText("Senhas diferentes, insira novamente");
             
         } else {
             testRegister.setForeground(Color.GREEN);
-            testRegister.setText("Registered");
+            testRegister.setText("Registrado");
+            
+            tfNameRegister.setText("");
+            tfEmailRegister.setText("");
+            tfUserRegister.setText("");
+            tfPassRegister.setText("");
+            tfConfirmPassRegister.setText("");
         }
         
     }//GEN-LAST:event_btnRegisterActionPerformed

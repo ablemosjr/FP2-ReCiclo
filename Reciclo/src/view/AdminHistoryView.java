@@ -18,14 +18,6 @@ public class AdminHistoryView extends javax.swing.JFrame {
         
         initComponents();
         tabelaAdmin.fixTable(jScrollPane1);
-        
-        // Teste tabela
-        /*
-        DefaultTableModel mode = (DefaultTableModel) tabelaAdmin.getModel();
-        for(int i = 1; i <= 20; i++) {
-            mode.addRow(new Object[]{i, "10gr", 20, "01/01/0001"});
-        }
-        */
     }
 
     @SuppressWarnings("unchecked")
@@ -49,6 +41,7 @@ public class AdminHistoryView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
@@ -202,6 +195,7 @@ public class AdminHistoryView extends javax.swing.JFrame {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO
+        
         String test = "000000";
         
         if(tfSearchRA.getText().equals(test)) {
@@ -221,17 +215,19 @@ public class AdminHistoryView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnBuscaViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaViewActionPerformed
-        // TODO
+        
+        AdminSearchView searchView = new AdminSearchView();
+        
+        this.setVisible(false);
+        searchView.setVisible(true);
     }//GEN-LAST:event_btnBuscaViewActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO
-        
+
         AdminRegisterView registerView = new AdminRegisterView();
         
         this.setVisible(false);
         registerView.setVisible(true);
-        
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed

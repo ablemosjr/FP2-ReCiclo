@@ -9,9 +9,6 @@ package view;
 
 public class AdminLoginView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminLoginView
-     */
     public AdminLoginView() {
         initComponents();
     }
@@ -39,6 +36,7 @@ public class AdminLoginView extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(480, 800));
         setName("AdminLoginView"); // NOI18N
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -62,11 +60,6 @@ public class AdminLoginView extends javax.swing.JFrame {
         tfAdminLogin.setForeground(new java.awt.Color(160, 205, 96));
         tfAdminLogin.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfAdminLogin.setBorder(null);
-        tfAdminLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAdminLoginActionPerformed(evt);
-            }
-        });
         jPanel1.add(tfAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 240, 50));
 
         jSeparator1.setBackground(new java.awt.Color(160, 205, 96));
@@ -121,11 +114,6 @@ public class AdminLoginView extends javax.swing.JFrame {
         tfAdminPassword.setForeground(new java.awt.Color(160, 205, 96));
         tfAdminPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfAdminPassword.setBorder(null);
-        tfAdminPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAdminPasswordActionPerformed(evt);
-            }
-        });
         jPanel1.add(tfAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 240, 50));
 
         testConnection.setBackground(new java.awt.Color(60, 60, 60));
@@ -155,10 +143,6 @@ public class AdminLoginView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAdminLoginActionPerformed
-
-    }//GEN-LAST:event_tfAdminLoginActionPerformed
-
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         
         // Teste de tela, botão exit
@@ -166,7 +150,6 @@ public class AdminLoginView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        
         //TODO
         
         // Teste de login
@@ -188,17 +171,13 @@ public class AdminLoginView extends javax.swing.JFrame {
                 homeAdmin.setVisible(true);
                 
             } else {
-                testConnection.setText("Invalid login or password!");
+                testConnection.setText("Usuário ou senha inválidos!");
             }    
             
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void tfAdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAdminPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAdminPasswordActionPerformed
 
     public static void main(String args[]) {
 
