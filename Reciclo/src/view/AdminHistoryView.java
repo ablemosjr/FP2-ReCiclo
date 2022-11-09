@@ -11,9 +11,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class AdminHistoryView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminHistoryView
-     */
     public AdminHistoryView() {
         
         initComponents();
@@ -26,18 +23,18 @@ public class AdminHistoryView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        btnExit = new view.projectButton();
-        btnBuscaView = new view.projectButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnRegister = new view.projectButton();
+        btnRegister = new model.projectButton();
+        btnExit = new model.projectButton();
+        btnBuscaView = new model.projectButton();
         jLabel3 = new javax.swing.JLabel();
-        btnSearch = new view.projectButton();
-        btnDelete = new view.projectButton();
         tfSearchRA = new model.projectTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaAdmin = new model.projectTable();
+        btnDelete = new model.projectButton();
+        btnSearch = new model.projectButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -51,36 +48,6 @@ public class AdminHistoryView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(80, 80, 80));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnExit.setBackground(new java.awt.Color(80, 80, 80));
-        btnExit.setBorder(null);
-        btnExit.setForeground(new java.awt.Color(206, 240, 157));
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-x-45.png"))); // NOI18N
-        btnExit.setColor(new java.awt.Color(80, 80, 80));
-        btnExit.setColorClick(new java.awt.Color(206, 240, 157));
-        btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnExit.setRadius(30);
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
-
-        btnBuscaView.setBackground(new java.awt.Color(80, 80, 80));
-        btnBuscaView.setBorder(null);
-        btnBuscaView.setForeground(new java.awt.Color(206, 240, 157));
-        btnBuscaView.setText("Busca por ID");
-        btnBuscaView.setColor(new java.awt.Color(80, 80, 80));
-        btnBuscaView.setColorClick(new java.awt.Color(206, 240, 157));
-        btnBuscaView.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        btnBuscaView.setRadius(30);
-        btnBuscaView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscaViewActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnBuscaView, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 160, 50));
 
         jLabel1.setBackground(new java.awt.Color(80, 80, 80));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -109,42 +76,42 @@ public class AdminHistoryView extends javax.swing.JFrame {
         });
         jPanel2.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 160, 50));
 
+        btnExit.setBackground(new java.awt.Color(80, 80, 80));
+        btnExit.setBorder(null);
+        btnExit.setForeground(new java.awt.Color(206, 240, 157));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-x-45.png"))); // NOI18N
+        btnExit.setColor(new java.awt.Color(80, 80, 80));
+        btnExit.setColorClick(new java.awt.Color(206, 240, 157));
+        btnExit.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnExit.setRadius(30);
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
+
+        btnBuscaView.setBackground(new java.awt.Color(80, 80, 80));
+        btnBuscaView.setBorder(null);
+        btnBuscaView.setForeground(new java.awt.Color(206, 240, 157));
+        btnBuscaView.setText("Busca por ID");
+        btnBuscaView.setColor(new java.awt.Color(80, 80, 80));
+        btnBuscaView.setColorClick(new java.awt.Color(206, 240, 157));
+        btnBuscaView.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnBuscaView.setRadius(30);
+        btnBuscaView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscaViewActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscaView, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 160, 50));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 160));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(160, 205, 96));
         jLabel3.setText("RA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-
-        btnSearch.setBackground(new java.awt.Color(60, 60, 60));
-        btnSearch.setBorder(null);
-        btnSearch.setForeground(new java.awt.Color(206, 240, 157));
-        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-pesquisar-45.png"))); // NOI18N
-        btnSearch.setColor(new java.awt.Color(60, 60, 60));
-        btnSearch.setColorClick(new java.awt.Color(206, 240, 157));
-        btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        btnSearch.setRadius(30);
-        btnSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSearchActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 50, 50));
-
-        btnDelete.setBackground(new java.awt.Color(60, 60, 60));
-        btnDelete.setBorder(null);
-        btnDelete.setForeground(new java.awt.Color(206, 240, 157));
-        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-excluir-38.png"))); // NOI18N
-        btnDelete.setColor(new java.awt.Color(60, 60, 60));
-        btnDelete.setColorClick(new java.awt.Color(206, 240, 157));
-        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        btnDelete.setRadius(30);
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 50, 50));
 
         tfSearchRA.setBackground(new java.awt.Color(60, 60, 60));
         tfSearchRA.setForeground(new java.awt.Color(160, 205, 96));
@@ -187,32 +154,41 @@ public class AdminHistoryView extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 480, 460));
 
+        btnDelete.setBackground(new java.awt.Color(60, 60, 60));
+        btnDelete.setBorder(null);
+        btnDelete.setForeground(new java.awt.Color(206, 240, 157));
+        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-excluir-38.png"))); // NOI18N
+        btnDelete.setColor(new java.awt.Color(60, 60, 60));
+        btnDelete.setColorClick(new java.awt.Color(206, 240, 157));
+        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnDelete.setRadius(30);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 50, 50));
+
+        btnSearch.setBackground(new java.awt.Color(60, 60, 60));
+        btnSearch.setBorder(null);
+        btnSearch.setForeground(new java.awt.Color(206, 240, 157));
+        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-pesquisar-45.png"))); // NOI18N
+        btnSearch.setColor(new java.awt.Color(60, 60, 60));
+        btnSearch.setColorClick(new java.awt.Color(206, 240, 157));
+        btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnSearch.setRadius(30);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 50, 50));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 800));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO
-        
-        String test = "000000";
-        
-        if(tfSearchRA.getText().equals(test)) {
-            
-            DefaultTableModel mode = (DefaultTableModel) tabelaAdmin.getModel();
-            for(int i = 1; i <= 20; i++) {
-                mode.addRow(new Object[]{i, "10gr", 20, "01/01/0001"});
-            }
-        } 
-        
-    }//GEN-LAST:event_btnSearchActionPerformed
-
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-
-        // Botão exit
-        System.exit(0);
-    }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnBuscaViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaViewActionPerformed
         
@@ -229,6 +205,26 @@ public class AdminHistoryView extends javax.swing.JFrame {
         this.setVisible(false);
         registerView.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+
+        // Botão exit
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO
+        
+        String test = "000000";
+        
+        if(tfSearchRA.getText().equals(test)) {
+            
+            DefaultTableModel mode = (DefaultTableModel) tabelaAdmin.getModel();
+            for(int i = 1; i <= 20; i++) {
+                mode.addRow(new Object[]{i, "10gr", 20, "01/01/0001"});
+            }
+        } 
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO
@@ -248,11 +244,11 @@ public class AdminHistoryView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.projectButton btnBuscaView;
-    private view.projectButton btnDelete;
-    private view.projectButton btnExit;
-    private view.projectButton btnRegister;
-    private view.projectButton btnSearch;
+    private model.projectButton btnBuscaView;
+    private model.projectButton btnDelete;
+    private model.projectButton btnExit;
+    private model.projectButton btnRegister;
+    private model.projectButton btnSearch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

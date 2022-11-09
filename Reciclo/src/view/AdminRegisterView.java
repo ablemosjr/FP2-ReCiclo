@@ -21,10 +21,10 @@ public class AdminRegisterView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        btnExit = new view.projectButton();
-        btnReturn = new view.projectButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnReturn = new model.projectButton();
+        btnExit = new model.projectButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -34,14 +34,14 @@ public class AdminRegisterView extends javax.swing.JFrame {
         tfNameRegister = new model.projectTextField();
         tfEmailRegister = new model.projectTextField();
         tfUserRegister = new model.projectTextField();
-        btnRegister = new view.projectButton();
-        btnClear = new view.projectButton();
         tfConfirmPassRegister = new javax.swing.JPasswordField();
         tfConfirmPassRegister_NOUSE = new model.projectTextField();
         tfPassRegister = new javax.swing.JPasswordField();
         tfPassRegister_NOUSE = new model.projectTextField();
         testRegister = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
+        btnClear = new model.projectButton();
+        btnRegister = new model.projectButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -58,36 +58,6 @@ public class AdminRegisterView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(80, 80, 80));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnExit.setBackground(new java.awt.Color(80, 80, 80));
-        btnExit.setBorder(null);
-        btnExit.setForeground(new java.awt.Color(206, 240, 157));
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-x-45.png"))); // NOI18N
-        btnExit.setColor(new java.awt.Color(80, 80, 80));
-        btnExit.setColorClick(new java.awt.Color(206, 240, 157));
-        btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnExit.setRadius(30);
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
-
-        btnReturn.setBackground(new java.awt.Color(80, 80, 80));
-        btnReturn.setBorder(null);
-        btnReturn.setForeground(new java.awt.Color(206, 240, 157));
-        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-retornar-45.png"))); // NOI18N
-        btnReturn.setColor(new java.awt.Color(80, 80, 80));
-        btnReturn.setColorClick(new java.awt.Color(206, 240, 157));
-        btnReturn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnReturn.setRadius(30);
-        btnReturn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReturnActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 50, 50));
-
         jLabel2.setBackground(new java.awt.Color(80, 80, 80));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(160, 205, 96));
@@ -99,6 +69,32 @@ public class AdminRegisterView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(160, 205, 96));
         jLabel3.setText("Registrar");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 150, 30));
+
+        btnReturn.setBorder(null);
+        btnReturn.setForeground(new java.awt.Color(206, 240, 157));
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-retornar-45.png"))); // NOI18N
+        btnReturn.setColor(new java.awt.Color(80, 80, 80));
+        btnReturn.setColorClick(new java.awt.Color(206, 240, 157));
+        btnReturn.setRadius(30);
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 50, 50));
+
+        btnExit.setBorder(null);
+        btnExit.setForeground(new java.awt.Color(206, 240, 157));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-x-45.png"))); // NOI18N
+        btnExit.setColor(new java.awt.Color(80, 80, 80));
+        btnExit.setColorClick(new java.awt.Color(206, 240, 157));
+        btnExit.setRadius(30);
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 160));
 
@@ -143,36 +139,6 @@ public class AdminRegisterView extends javax.swing.JFrame {
         tfUserRegister.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jPanel1.add(tfUserRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 420, 50));
 
-        btnRegister.setBackground(new java.awt.Color(60, 60, 60));
-        btnRegister.setBorder(null);
-        btnRegister.setForeground(new java.awt.Color(206, 240, 157));
-        btnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-adicionar-usuário-55.png"))); // NOI18N
-        btnRegister.setColor(new java.awt.Color(60, 60, 60));
-        btnRegister.setColorClick(new java.awt.Color(206, 240, 157));
-        btnRegister.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnRegister.setRadius(30);
-        btnRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 660, 140, 70));
-
-        btnClear.setBackground(new java.awt.Color(60, 60, 60));
-        btnClear.setBorder(null);
-        btnClear.setForeground(new java.awt.Color(206, 240, 157));
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-vassoura-45.png"))); // NOI18N
-        btnClear.setColor(new java.awt.Color(60, 60, 60));
-        btnClear.setColorClick(new java.awt.Color(206, 240, 157));
-        btnClear.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnClear.setRadius(30);
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 660, 140, 70));
-
         tfConfirmPassRegister.setBackground(new java.awt.Color(60, 60, 60));
         tfConfirmPassRegister.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tfConfirmPassRegister.setForeground(new java.awt.Color(160, 205, 96));
@@ -211,25 +177,38 @@ public class AdminRegisterView extends javax.swing.JFrame {
         jSeparator3.setForeground(new java.awt.Color(70, 70, 70));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 480, 10));
 
+        btnClear.setBackground(new java.awt.Color(60, 60, 60));
+        btnClear.setBorder(null);
+        btnClear.setForeground(new java.awt.Color(206, 240, 157));
+        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-vassoura-45.png"))); // NOI18N
+        btnClear.setColor(new java.awt.Color(60, 60, 60));
+        btnClear.setColorClick(new java.awt.Color(206, 240, 157));
+        btnClear.setRadius(30);
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 660, 140, 70));
+
+        btnRegister.setBackground(new java.awt.Color(60, 60, 60));
+        btnRegister.setForeground(new java.awt.Color(206, 240, 157));
+        btnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-adicionar-usuário-55.png"))); // NOI18N
+        btnRegister.setColor(new java.awt.Color(60, 60, 60));
+        btnRegister.setColorClick(new java.awt.Color(206, 240, 157));
+        btnRegister.setRadius(30);
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 660, 140, 70));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 800));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-       
-        // Botão exit
-        System.exit(0);
-    }//GEN-LAST:event_btnExitActionPerformed
-
-    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-
-        AdminHistoryView homeAdmin = new AdminHistoryView();
-        
-        this.setVisible(false);
-        homeAdmin.setVisible(true);
-    }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         
@@ -273,8 +252,21 @@ public class AdminRegisterView extends javax.swing.JFrame {
             tfPassRegister.setText("");
             tfConfirmPassRegister.setText("");
         }
-        
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        
+        AdminHistoryView homeAdmin = new AdminHistoryView();
+        
+        this.setVisible(false);
+        homeAdmin.setVisible(true);
+    }//GEN-LAST:event_btnReturnActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        
+        // Botão exit
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
 
     public static void main(String args[]) {
         
@@ -287,10 +279,10 @@ public class AdminRegisterView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.projectButton btnClear;
-    private view.projectButton btnExit;
-    private view.projectButton btnRegister;
-    private view.projectButton btnReturn;
+    private model.projectButton btnClear;
+    private model.projectButton btnExit;
+    private model.projectButton btnRegister;
+    private model.projectButton btnReturn;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
