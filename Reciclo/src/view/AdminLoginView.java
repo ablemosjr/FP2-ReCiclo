@@ -145,8 +145,10 @@ public class AdminLoginView extends javax.swing.JFrame {
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         
-        // Teste de tela, botão exit
-        System.exit(0);
+        AlunoLoginView alunoLogin = new AlunoLoginView();
+        
+        this.setVisible(false);
+        alunoLogin.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
