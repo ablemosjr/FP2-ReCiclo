@@ -261,7 +261,9 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoActionPerformed
-
+        HistoricoAlunoView alunohist = new HistoricoAlunoView();
+        this.setVisible(false);
+        alunohist.setVisible(true);
     }//GEN-LAST:event_btnHistoricoActionPerformed
 
     private void txtDescartarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescartarActionPerformed
