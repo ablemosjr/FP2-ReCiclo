@@ -172,6 +172,7 @@ public class AdminLoginView extends javax.swing.JFrame {
         // Teste de login
         String user = "admin";
         String pass = "admin";
+        TelaLoading loading = new TelaLoading();
         
         try {   
             // Fazer abrir conexao com bd aqui e processos
@@ -182,6 +183,9 @@ public class AdminLoginView extends javax.swing.JFrame {
             if(username.equals(user) && password.equals(pass)) {
                 testConnectionFail.setText("");
                 testConnection.setText("CONNECT");
+                this.setVisible(false);
+                loading.setVisible(true);
+                
             } else {
                 testConnection.setText("");
                 testConnectionFail.setText("Invalid login or password!");
