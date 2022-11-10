@@ -4,24 +4,22 @@ import java.util.logging.Logger;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class TelaLoadingAluno extends javax.swing.JFrame {
+public class TelaLoadingReciclando extends javax.swing.JFrame {
 
-    public TelaLoadingAluno() {
+    public TelaLoadingReciclando() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingReciclando.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingReciclando.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingReciclando.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(TelaLoadingAluno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoadingReciclando.class.getName()).log(Level.SEVERE, null, ex);
         }
         initComponents();
-        CarteiraAlunoView carteira = new CarteiraAlunoView();
-       jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
-
+        TelaGeradoPontosView pontos = new TelaGeradoPontosView();
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -44,15 +42,15 @@ public class TelaLoadingAluno extends javax.swing.JFrame {
                     Thread.sleep(60);
                     ProgressBar.setValue(i);
                     if(ProgressBar.getValue() <=25){
-                        lblStatus.setText("Iniciando o sistema...");
+                        lblStatus.setText("Reciclando...");
                     
                     }
                     else if (ProgressBar.getValue()<=50){
-                        lblStatus.setText("Carregando banco de dados...");
+                        lblStatus.setText("Gerando seus pontos, aguarde...");
                     }
                 }
                     dispose();
-                    carteira.setVisible(true);
+                    pontos.setVisible(true);
             }catch(InterruptedException ex){
                
             }
@@ -68,8 +66,6 @@ public class TelaLoadingAluno extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        testConnectionFail = new javax.swing.JLabel();
-        testConnection = new javax.swing.JLabel();
         ProgressBar = new javax.swing.JProgressBar();
         lblStatus = new javax.swing.JLabel();
 
@@ -86,18 +82,6 @@ public class TelaLoadingAluno extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RecicloLogo_User.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
-
-        testConnectionFail.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testConnectionFail.setForeground(new java.awt.Color(255, 51, 51));
-        testConnectionFail.setToolTipText("");
-        testConnectionFail.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(testConnectionFail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
-
-        testConnection.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testConnection.setForeground(new java.awt.Color(160, 205, 96));
-        testConnection.setToolTipText("");
-        testConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, 280, 40));
 
         ProgressBar.setBackground(new java.awt.Color(160, 205, 96));
         ProgressBar.setForeground(new java.awt.Color(160, 205, 96));
@@ -138,7 +122,5 @@ public class TelaLoadingAluno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblStatus;
-    private javax.swing.JLabel testConnection;
-    private javax.swing.JLabel testConnectionFail;
     // End of variables declaration//GEN-END:variables
 }

@@ -10,6 +10,7 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         lblValorCarteira.setText("00,00");//TODO Valor de quanto o aluno tem pra gastar no banco de dados
         lblPontuacaoSQL.setText("00000");//TODO Pontuacao total do aluno no banco de dados
         lblPontuacaoDescarteSQL.setText("00000");//TODO Pontuacao descarte anterior do aluno no banco de dados
+
     }
 
     @SuppressWarnings("unchecked")
@@ -249,7 +250,10 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReciclarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciclarActionPerformed
-
+        TelaLoadingReciclando loadingreciclando = new TelaLoadingReciclando();
+        this.setVisible(false);
+        loadingreciclando.setVisible(true);
+        //TODO Criar um insert no banco dados, preenchendo a quantidade (gramas) com o txt get text
        
     }//GEN-LAST:event_btnReciclarActionPerformed
 
@@ -267,6 +271,7 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHistoricoActionPerformed
 
     private void txtDescartarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescartarActionPerformed
+
     }//GEN-LAST:event_txtDescartarActionPerformed
 
     public static void main(String args[]) {
