@@ -153,7 +153,7 @@ public class AdminLoginView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(480, 800));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -164,7 +164,9 @@ public class AdminLoginView extends javax.swing.JFrame {
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         
         // Teste de tela, botão exit
-            System.exit(0);
+        AlunoLoginView alunolog = new AlunoLoginView();
+        this.setVisible(false);              
+        alunolog.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
