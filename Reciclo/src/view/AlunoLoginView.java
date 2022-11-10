@@ -1,8 +1,5 @@
 package view;
 
-import view.AdminLoginView;
-import view.TelaLoadingAluno;
-
 public class AlunoLoginView extends javax.swing.JFrame {
 
     public AlunoLoginView() {
@@ -115,7 +112,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(480, 800));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

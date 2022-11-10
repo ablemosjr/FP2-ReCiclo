@@ -1,19 +1,15 @@
 package view;
 
-import view.HistoricoAlunoView;
-import view.TelaLoadingReciclando;
-
-
 public class CarteiraAlunoView extends javax.swing.JFrame {
 
     public CarteiraAlunoView() {
         initComponents();
         
-        lblRAValor.setText("RA 000000"); //TODO Valor do RA no banco de dados
-        lblAluno.setText("Aluno"); //TODO Nome do aluno no banco de dados
-        lblValorCarteira.setText("00,00");//TODO Valor de quanto o aluno tem pra gastar no banco de dados
-        lblPontuacaoSQL.setText("00000");//TODO Pontuacao total do aluno no banco de dados
-        lblPontuacaoDescarteSQL.setText("00000");//TODO Pontuacao descarte anterior do aluno no banco de dados
+        lblRAValor.setText("123456"); //TODO Valor do RA no banco de dados
+        lblAluno.setText("Nome Aluno"); //TODO Nome do aluno no banco de dados
+        lblValorCarteira.setText("12,34");//TODO Valor de quanto o aluno tem pra gastar no banco de dados
+        lblPontuacaoSQL.setText("123456");//TODO Pontuacao total do aluno no banco de dados
+        lblPontuacaoDescarteSQL.setText("15");//TODO Pontuacao descarte anterior do aluno no banco de dados
 
     }
 
@@ -57,6 +53,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(480, 800));
         setMinimumSize(new java.awt.Dimension(480, 800));
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

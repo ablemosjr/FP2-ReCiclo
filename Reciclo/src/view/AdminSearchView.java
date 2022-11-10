@@ -54,6 +54,7 @@ public class AdminSearchView extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(480, 800));
         setMinimumSize(new java.awt.Dimension(480, 800));
         setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));

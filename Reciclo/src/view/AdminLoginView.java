@@ -37,6 +37,7 @@ public class AdminLoginView extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(480, 800));
         setName("AdminLoginView"); // NOI18N
         setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N

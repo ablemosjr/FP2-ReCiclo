@@ -7,10 +7,13 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
 
     public HistoricoAlunoView() {
         initComponents();
-        lblAlunoHistorico.setText("Aluno");//TODO nome do aluno no banco de dados
-        lblRAValorHistorico.setText("000000");//TODO numero do RA do aluno no banco de dados 
-        lblPontuacaoConvertidaSQL.setText("000000");//TODO numero de pontos total do aluno no banco de dados
-        lblPontuacaoConvertidaSQL.setText("000000");//TODO numero de pontos total convertidos do aluno no banco de dados
+        
+        tabela.fixTable(jScrollPane1);
+        
+        lblAlunoHistorico.setText("Nome Aluno");//TODO nome do aluno no banco de dados
+        lblRAValorHistorico.setText("123456");//TODO numero do RA do aluno no banco de dados 
+        lblPontuacaoTotalSQL.setText("123456");//TODO numero de pontos total do aluno no banco de dados
+        lblPontuacaoConvertidaSQL.setText("123789");//TODO numero de pontos total convertidos do aluno no banco de dados
      
         DefaultTableModel mode = (DefaultTableModel) tabela.getModel();
         for(int i = 1; i <= 20; i++) {
@@ -43,11 +46,12 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         lblPontuacaoConvertidaSQL = new model.projectTextField();
         jLabel7 = new javax.swing.JLabel();
-        lblPontuacaoTotalSQL1 = new model.projectTextField();
+        lblPontuacaoTotalSQL = new model.projectTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -70,12 +74,12 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         lblPontuacao1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPontuacao1.setForeground(new java.awt.Color(160, 205, 96));
         lblPontuacao1.setText("Sua pontuação");
-        jPanel1.add(lblPontuacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 630, -1, -1));
+        jPanel1.add(lblPontuacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 630, -1, -1));
 
         lblDescartar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblDescartar1.setForeground(new java.awt.Color(160, 205, 96));
         lblDescartar1.setText("total");
-        jPanel1.add(lblDescartar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 660, -1, -1));
+        jPanel1.add(lblDescartar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 660, -1, -1));
 
         lblPontuacao2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPontuacao2.setForeground(new java.awt.Color(160, 205, 96));
@@ -179,12 +183,12 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         jLabel7.setText("pts");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 710, 30, 30));
 
-        lblPontuacaoTotalSQL1.setEditable(false);
-        lblPontuacaoTotalSQL1.setBackground(new java.awt.Color(60, 60, 60));
-        lblPontuacaoTotalSQL1.setForeground(new java.awt.Color(160, 205, 96));
-        lblPontuacaoTotalSQL1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        lblPontuacaoTotalSQL1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(lblPontuacaoTotalSQL1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 170, 70));
+        lblPontuacaoTotalSQL.setEditable(false);
+        lblPontuacaoTotalSQL.setBackground(new java.awt.Color(60, 60, 60));
+        lblPontuacaoTotalSQL.setForeground(new java.awt.Color(160, 205, 96));
+        lblPontuacaoTotalSQL.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        lblPontuacaoTotalSQL.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(lblPontuacaoTotalSQL, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 170, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,7 +201,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(480, 800));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -244,7 +248,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
     private javax.swing.JLabel lblPontuacao1;
     private javax.swing.JLabel lblPontuacao2;
     private model.projectTextField lblPontuacaoConvertidaSQL;
-    private model.projectTextField lblPontuacaoTotalSQL1;
+    private model.projectTextField lblPontuacaoTotalSQL;
     private javax.swing.JLabel lblRAValorHistorico;
     private model.projectTable tabela;
     private javax.swing.JLabel txt;

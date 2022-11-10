@@ -9,6 +9,7 @@
     </Property>
     <Property name="name" type="java.lang.String" value="AdminLoginView" noResource="true"/>
     <Property name="undecorated" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
