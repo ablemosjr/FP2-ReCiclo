@@ -25,18 +25,19 @@ public class AdminLoginView extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        btnReturn = new view.projectButton();
-        btnLogin = new view.projectButton();
         jLabel4 = new javax.swing.JLabel();
         tfAdminPassword = new javax.swing.JPasswordField();
         testConnection = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
+        btnReturn = new model.projectButton();
+        btnLogin = new model.projectButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(480, 800));
         setName("AdminLoginView"); // NOI18N
         setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -76,13 +77,34 @@ public class AdminLoginView extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-usuário-28.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RecicloLogo_Admin.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
+
+        tfAdminPassword.setBackground(new java.awt.Color(60, 60, 60));
+        tfAdminPassword.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        tfAdminPassword.setForeground(new java.awt.Color(160, 205, 96));
+        tfAdminPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        tfAdminPassword.setBorder(null);
+        jPanel1.add(tfAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 240, 50));
+
+        testConnection.setBackground(new java.awt.Color(60, 60, 60));
+        testConnection.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        testConnection.setForeground(new java.awt.Color(255, 0, 0));
+        testConnection.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        testConnection.setToolTipText("");
+        testConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 470, 30));
+
+        jSeparator3.setBackground(new java.awt.Color(60, 60, 60));
+        jSeparator3.setForeground(new java.awt.Color(70, 70, 70));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 480, 10));
+
         btnReturn.setBackground(new java.awt.Color(60, 60, 60));
         btnReturn.setBorder(null);
         btnReturn.setForeground(new java.awt.Color(206, 240, 157));
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-retornar-45.png"))); // NOI18N
         btnReturn.setColor(new java.awt.Color(60, 60, 60));
         btnReturn.setColorClick(new java.awt.Color(206, 240, 157));
-        btnReturn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnReturn.setRadius(30);
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,28 +128,6 @@ public class AdminLoginView extends javax.swing.JFrame {
         });
         jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 610, 200, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RecicloLogo_Admin.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
-
-        tfAdminPassword.setBackground(new java.awt.Color(60, 60, 60));
-        tfAdminPassword.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        tfAdminPassword.setForeground(new java.awt.Color(160, 205, 96));
-        tfAdminPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        tfAdminPassword.setBorder(null);
-        jPanel1.add(tfAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 240, 50));
-
-        testConnection.setBackground(new java.awt.Color(60, 60, 60));
-        testConnection.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        testConnection.setForeground(new java.awt.Color(255, 0, 0));
-        testConnection.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        testConnection.setToolTipText("");
-        testConnection.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(testConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 470, 30));
-
-        jSeparator3.setBackground(new java.awt.Color(60, 60, 60));
-        jSeparator3.setForeground(new java.awt.Color(70, 70, 70));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 760, 480, 10));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,9 +144,11 @@ public class AdminLoginView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+
+        AlunoLoginView alunoLogin = new AlunoLoginView();
         
-        // Teste de tela, botão exit
-        System.exit(0);
+        this.setVisible(false);
+        alunoLogin.setVisible(true);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -190,8 +192,8 @@ public class AdminLoginView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.projectButton btnLogin;
-    private view.projectButton btnReturn;
+    private model.projectButton btnLogin;
+    private model.projectButton btnReturn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
