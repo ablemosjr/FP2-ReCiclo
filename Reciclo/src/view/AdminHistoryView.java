@@ -127,6 +127,7 @@ public class AdminHistoryView extends javax.swing.JFrame {
         jScrollPane1.setMinimumSize(new java.awt.Dimension(480, 460));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(480, 460));
 
+        tabelaAdmin.setBackground(new java.awt.Color(70, 70, 70));
         tabelaAdmin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
