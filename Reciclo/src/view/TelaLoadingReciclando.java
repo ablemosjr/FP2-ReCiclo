@@ -4,6 +4,8 @@ import java.util.logging.Logger;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import view.TelaGeradoPontosView;
+
 public class TelaLoadingReciclando extends javax.swing.JFrame {
 
     public TelaLoadingReciclando() {
@@ -30,8 +32,6 @@ public class TelaLoadingReciclando extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        
-        
 
         pack();
         setLocationRelativeTo(null);

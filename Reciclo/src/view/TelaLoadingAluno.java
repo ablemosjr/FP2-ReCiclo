@@ -4,6 +4,9 @@ import java.util.logging.Logger;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import view.CarteiraAlunoView;
+import view.TelaGeradoPontosView;
+
 public class TelaLoadingAluno extends javax.swing.JFrame {
 
     public TelaLoadingAluno() {
