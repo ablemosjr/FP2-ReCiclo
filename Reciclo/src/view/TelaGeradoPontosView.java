@@ -16,6 +16,7 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
         lblPontos = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         lblSucesso = new javax.swing.JLabel();
+
         lblGerados = new javax.swing.JLabel();
         btnReturnCarteira = new model.projectButton();
         lblObrigado1 = new javax.swing.JLabel();
@@ -37,6 +38,7 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
 
         lblPontos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPontos.setForeground(new java.awt.Color(160, 205, 96));
+
         lblPontos.setText("pontos");
         jPanel1.add(lblPontos, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 700, -1, -1));
 
@@ -47,6 +49,7 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
         lblSucesso.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblSucesso.setForeground(new java.awt.Color(160, 205, 96));
         lblSucesso.setText("com sucesso!");
+
         jPanel1.add(lblSucesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
 
         lblGerados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -110,12 +113,14 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void btnReturnCarteiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnCarteiraActionPerformed
 
         // Redireciona para a carteira do aluno
         CarteiraAlunoView carteiraalun = new CarteiraAlunoView();
         this.setVisible(false);
         carteiraalun.setVisible(true);
+
     }//GEN-LAST:event_btnReturnCarteiraActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
@@ -125,7 +130,6 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
         alunolog.setVisible(true);
         // Redireciona para tela de login do aluno
     }//GEN-LAST:event_btnSairActionPerformed
-
 
     public static void main(String args[]) {
 
@@ -137,6 +141,7 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private model.projectButton btnReturnCarteira;
     private model.projectButton btnSair;
     private javax.swing.JLabel jLabel4;
@@ -146,6 +151,7 @@ public class TelaGeradoPontosView extends javax.swing.JFrame {
     private javax.swing.JLabel lblObrigado1;
     private javax.swing.JLabel lblPontos;
     private model.projectTextField lblPontuacaoGeradaSQL;
+
     private javax.swing.JLabel lblSucesso;
     // End of variables declaration//GEN-END:variables
 }

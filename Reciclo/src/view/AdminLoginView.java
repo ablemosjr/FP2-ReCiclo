@@ -139,7 +139,7 @@ public class AdminLoginView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(480, 800));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -149,6 +149,7 @@ public class AdminLoginView extends javax.swing.JFrame {
         
         this.setVisible(false);
         alunoLogin.setVisible(true);
+
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -157,6 +158,7 @@ public class AdminLoginView extends javax.swing.JFrame {
         // Teste de login
         String user = "admin";
         String pass = "admin";
+        TelaLoading loading = new TelaLoading();
         
         AdminHistoryView homeAdmin = new AdminHistoryView();
         
@@ -171,7 +173,7 @@ public class AdminLoginView extends javax.swing.JFrame {
             if(username.equals(user) && password.equals(pass)) {       
                 this.setVisible(false);
                 homeAdmin.setVisible(true);
-                
+
             } else {
                 testConnection.setText("Usuário ou senha inválidos!");
             }    

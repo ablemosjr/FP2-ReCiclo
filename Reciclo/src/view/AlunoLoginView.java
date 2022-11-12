@@ -16,6 +16,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+
         btnLoginRA = new model.projectButton();
         jSeparator3 = new javax.swing.JSeparator();
         testConnection = new javax.swing.JLabel();
@@ -67,12 +68,14 @@ public class AlunoLoginView extends javax.swing.JFrame {
         btnLoginRA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-seta-longa-à-direita-64.png"))); // NOI18N
         btnLoginRA.setColor(new java.awt.Color(60, 60, 60));
         btnLoginRA.setColorClick(new java.awt.Color(206, 240, 157));
+
         btnLoginRA.setRadius(30);
         btnLoginRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginRAActionPerformed(evt);
             }
         });
+
         jPanel1.add(btnLoginRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 140, 60));
 
         jSeparator3.setBackground(new java.awt.Color(60, 60, 60));
@@ -90,15 +93,18 @@ public class AlunoLoginView extends javax.swing.JFrame {
         btnAdminLog.setBackground(new java.awt.Color(60, 60, 60));
         btnAdminLog.setBorder(null);
         btnAdminLog.setForeground(new java.awt.Color(206, 240, 157));
+
         btnAdminLog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-admin-45.png"))); // NOI18N
         btnAdminLog.setColor(new java.awt.Color(60, 60, 60));
         btnAdminLog.setColorClick(new java.awt.Color(206, 240, 157));
+
         btnAdminLog.setRadius(30);
         btnAdminLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminLogActionPerformed(evt);
             }
         });
+
         jPanel1.add(btnAdminLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -113,6 +119,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
         );
 
         pack();
+
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -122,13 +129,13 @@ public class AlunoLoginView extends javax.swing.JFrame {
 
     private void btnLoginRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginRAActionPerformed
         //TODO
-        
+
         // Login com RA
         String user = "000000";
         TelaLoadingAluno loading = new TelaLoadingAluno();
 
         testConnection.setText("");
-        
+
         try {
             // Fazer abrir conexao com bd aqui e processos
 
@@ -140,6 +147,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
                 loading.setVisible(true);
 
             } else {
+
                 testConnection.setText("RA não encontrado");
 
             }
@@ -154,6 +162,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
         this.setVisible(false);              
         adminlog.setVisible(true);
         // Redireciona para tela de admin
+
     }//GEN-LAST:event_btnAdminLogActionPerformed
 
  
@@ -167,15 +176,19 @@ public class AlunoLoginView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private model.projectButton btnAdminLog;
     private model.projectButton btnLoginRA;
+
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;
+
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblRA;
     private javax.swing.JLabel testConnection;
+
     private javax.swing.JTextField tfRALogin;
     // End of variables declaration//GEN-END:variables
 }

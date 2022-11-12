@@ -79,11 +79,13 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="60" green="cd" red="a0" type="rgb"/>
             </Property>
+
             <Property name="text" type="java.lang.String" value="pontos"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="220" y="700" width="-1" height="-1"/>
+
             </Constraint>
           </Constraints>
         </Component>
@@ -98,7 +100,9 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+
               <AbsoluteConstraints x="30" y="410" width="420" height="20"/>
+
             </Constraint>
           </Constraints>
         </Component>
@@ -114,6 +118,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+
               <AbsoluteConstraints x="130" y="320" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
@@ -122,10 +127,12 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="1"/>
+
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="60" green="cd" red="a0" type="rgb"/>
             </Property>
+
             <Property name="text" type="java.lang.String" value="Foram gerados"/>
           </Properties>
           <Constraints>
@@ -169,10 +176,12 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="48" style="1"/>
+
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="60" green="cd" red="a0" type="rgb"/>
             </Property>
+
             <Property name="text" type="java.lang.String" value="Obrigado!"/>
           </Properties>
           <Constraints>
@@ -202,6 +211,7 @@
           </Constraints>
         </Component>
         <Component class="model.projectButton" name="btnSair">
+
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3c" green="3c" red="3c" type="rgb"/>
@@ -213,25 +223,31 @@
               <Color blue="9d" green="f0" red="ce" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+
               <Image iconType="3" name="/view/icons/icons8-x-45.png"/>
             </Property>
             <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="50" green="50" red="50" type="rgb"/>
+
             </Property>
             <Property name="colorClick" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="9d" green="f0" red="ce" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+
               <Font name="Segoe UI" size="16" style="1"/>
+
             </Property>
             <Property name="radius" type="int" value="30"/>
           </Properties>
           <Events>
+
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="410" y="20" width="50" height="50"/>
+
             </Constraint>
           </Constraints>
         </Component>

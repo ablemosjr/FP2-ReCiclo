@@ -2,7 +2,6 @@ package view;
 
 import javax.swing.table.DefaultTableModel;
 
-
 public class HistoricoAlunoView extends javax.swing.JFrame {
 
     public HistoricoAlunoView() {
@@ -19,6 +18,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         for(int i = 1; i <= 20; i++) {
             mode.addRow(new Object[]{"01/01/0001", "10", "20", "0,30"});
         }
+
     }
 
 
@@ -29,6 +29,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         lblDescartar = new javax.swing.JLabel();
+
         jSeparator4 = new javax.swing.JSeparator();
         lblPontuacao1 = new javax.swing.JLabel();
         lblDescartar1 = new javax.swing.JLabel();
@@ -65,6 +66,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         lblDescartar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblDescartar.setForeground(new java.awt.Color(160, 205, 96));
         lblDescartar.setText("convertidos");
+
         jPanel1.add(lblDescartar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 660, -1, -1));
 
         jSeparator4.setBackground(new java.awt.Color(160, 205, 96));
@@ -92,6 +94,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         lblHistorico.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblHistorico.setForeground(new java.awt.Color(160, 205, 96));
         lblHistorico.setText("Histórico de Reciclagem");
+
         jPanel5.add(lblHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-usuário-28.png"))); // NOI18N
@@ -115,12 +118,14 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
         btnReturnHistorico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-retornar-45.png"))); // NOI18N
         btnReturnHistorico.setColor(new java.awt.Color(80, 80, 80));
         btnReturnHistorico.setColorClick(new java.awt.Color(206, 240, 157));
+
         btnReturnHistorico.setRadius(30);
         btnReturnHistorico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnHistoricoActionPerformed(evt);
             }
         });
+
         jPanel5.add(btnReturnHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 50, 50));
 
         btnSair.setBorder(null);
@@ -231,6 +236,7 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private model.projectButton btnReturnHistorico;
     private model.projectButton btnSair;
     private javax.swing.JLabel jLabel5;
@@ -252,5 +258,6 @@ public class HistoricoAlunoView extends javax.swing.JFrame {
     private javax.swing.JLabel lblRAValorHistorico;
     private model.projectTable tabela;
     private javax.swing.JLabel txt;
+
     // End of variables declaration//GEN-END:variables
 }
