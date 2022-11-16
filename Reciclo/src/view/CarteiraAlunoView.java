@@ -21,6 +21,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         lblDescartar = new javax.swing.JLabel();
+
+
         lblDescarte = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -48,13 +50,17 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         testReciclagem = new javax.swing.JLabel();
 
+
         jTextField6.setText("jTextField6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+
         setMinimumSize(new java.awt.Dimension(480, 800));
         setUndecorated(true);
         setResizable(false);
+
+
 
         jPanel1.setBackground(new java.awt.Color(60, 60, 60));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -68,6 +74,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         lblDescartar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblDescartar.setForeground(new java.awt.Color(160, 205, 96));
         lblDescartar.setText("Descartar");
+
+
         jPanel1.add(lblDescartar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         lblDescarte.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -117,12 +125,16 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         btnSair.setColor(new java.awt.Color(80, 80, 80));
         btnSair.setColorClick(new java.awt.Color(206, 240, 157));
         btnSair.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+
+
         btnSair.setRadius(30);
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
             }
         });
+
+
         jPanel4.add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-usuário-28.png"))); // NOI18N
@@ -142,6 +154,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         lblReal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblReal.setForeground(new java.awt.Color(160, 205, 96));
         lblReal.setText("R$");
+
+
         jPanel4.add(lblReal, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 40, 40));
 
         lblValorCarteira.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -182,16 +196,22 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         btnHistorico.setBorder(null);
         btnHistorico.setForeground(new java.awt.Color(206, 240, 157));
         btnHistorico.setText("Acessar Histórico");
+
+
         btnHistorico.setToolTipText("");
         btnHistorico.setColor(new java.awt.Color(60, 60, 60));
         btnHistorico.setColorClick(new java.awt.Color(206, 240, 157));
         btnHistorico.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnHistorico.setRadius(40);
+
+
         btnHistorico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHistoricoActionPerformed(evt);
             }
         });
+
+
         jPanel1.add(btnHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 650, 230, 80));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -227,11 +247,13 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         txtDescartar.setForeground(new java.awt.Color(160, 205, 96));
         txtDescartar.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDescartar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         txtDescartar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDescartarActionPerformed(evt);
             }
         });
+
         jPanel1.add(txtDescartar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 170, 80));
 
         jSeparator4.setBackground(new java.awt.Color(60, 60, 60));
@@ -257,6 +279,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -278,8 +302,10 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
 
 
     private void btnReciclarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReciclarActionPerformed
+
                 
         AlunoLoginView.infotela = "";
+
 
         testReciclagem.setText("");
 
@@ -296,9 +322,11 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnReciclarActionPerformed
 
+
     private void txtDescartarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescartarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescartarActionPerformed
+
 
     public static void main(String args[]) {
       
@@ -310,6 +338,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
+
     private model.projectButton btnHistorico;
     private model.projectButton btnReciclar;
     private model.projectButton btnSair;
@@ -321,6 +351,8 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
+
+
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField jTextField6;
@@ -328,16 +360,22 @@ public class CarteiraAlunoView extends javax.swing.JFrame {
     private javax.swing.JLabel lblCarteira;
     private javax.swing.JLabel lblDescartar;
     private javax.swing.JLabel lblDescarte;
+
+
     private javax.swing.JLabel lblPontuacao;
     private javax.swing.JLabel lblPontuacao2;
     private model.projectTextField lblPontuacaoDescarteSQL;
     private model.projectTextField lblPontuacaoSQL;
+
+
     private javax.swing.JLabel lblRAValor;
     private javax.swing.JLabel lblReal;
     private javax.swing.JLabel lblTotal;
     private javax.swing.JLabel lblValorCarteira;
+
     private javax.swing.JLabel testReciclagem;
     private model.projectTextField txtDescartar;
     private model.projectTextField walletSpace;
+
     // End of variables declaration//GEN-END:variables
 }

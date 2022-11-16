@@ -158,6 +158,11 @@ public class AdminLoginView extends javax.swing.JFrame {
         // Teste de login
         String user = "admin";
         String pass = "admin";
+        TelaLoading loading = new TelaLoading();
+        
+        AdminHistoryView homeAdmin = new AdminHistoryView();
+        
+        testConnection.setText("");
         
         AdminHistoryView homeAdmin = new AdminHistoryView();
         

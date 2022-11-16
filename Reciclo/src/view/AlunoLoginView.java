@@ -1,8 +1,10 @@
 package view;
 
 public class AlunoLoginView extends javax.swing.JFrame {
+
     public static String infotela;
     
+
     public AlunoLoginView() {
         initComponents();
     }
@@ -17,11 +19,15 @@ public class AlunoLoginView extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+
+
         btnLoginRA = new model.projectButton();
         jSeparator3 = new javax.swing.JSeparator();
         testConnection = new javax.swing.JLabel();
         btnAdminLog = new model.projectButton();
+
         jButton1 = new javax.swing.JButton();
+
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
@@ -69,12 +75,16 @@ public class AlunoLoginView extends javax.swing.JFrame {
         btnLoginRA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-seta-longa-à-direita-64.png"))); // NOI18N
         btnLoginRA.setColor(new java.awt.Color(60, 60, 60));
         btnLoginRA.setColorClick(new java.awt.Color(206, 240, 157));
+
+
         btnLoginRA.setRadius(30);
         btnLoginRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginRAActionPerformed(evt);
             }
         });
+
+
         jPanel1.add(btnLoginRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 140, 60));
 
         jSeparator3.setBackground(new java.awt.Color(60, 60, 60));
@@ -92,15 +102,18 @@ public class AlunoLoginView extends javax.swing.JFrame {
         btnAdminLog.setBackground(new java.awt.Color(60, 60, 60));
         btnAdminLog.setBorder(null);
         btnAdminLog.setForeground(new java.awt.Color(206, 240, 157));
+
         btnAdminLog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/icons8-admin-45.png"))); // NOI18N
         btnAdminLog.setColor(new java.awt.Color(60, 60, 60));
         btnAdminLog.setColorClick(new java.awt.Color(206, 240, 157));
+
         btnAdminLog.setRadius(30);
         btnAdminLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminLogActionPerformed(evt);
             }
         });
+
         jPanel1.add(btnAdminLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 50));
 
         jButton1.setBackground(new java.awt.Color(60, 60, 60));
@@ -116,6 +129,7 @@ public class AlunoLoginView extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 690, -1, -1));
 
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -128,6 +142,8 @@ public class AlunoLoginView extends javax.swing.JFrame {
         );
 
         pack();
+
+
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,7 +156,9 @@ public class AlunoLoginView extends javax.swing.JFrame {
 
         // Login com RA
         String user = "000000";
+
         CarteiraAlunoView carteira = new CarteiraAlunoView();
+
 
         testConnection.setText("");
 
@@ -152,7 +170,9 @@ public class AlunoLoginView extends javax.swing.JFrame {
             if(username.equals(user)) {
 
                 this.setVisible(false);
+
                 carteira.setVisible(true);
+
 
             } else {
 
@@ -173,11 +193,13 @@ public class AlunoLoginView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnAdminLogActionPerformed
 
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         TelaNaoAluno naoaluno = new TelaNaoAluno();
         this.setVisible(false);              
         naoaluno.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
 
  
     public static void main(String args[]) {
@@ -190,16 +212,20 @@ public class AlunoLoginView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private model.projectButton btnAdminLog;
     private model.projectButton btnLoginRA;
     private javax.swing.JButton jButton1;
+
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;
+
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblRA;
     private javax.swing.JLabel testConnection;
+
     private javax.swing.JTextField tfRALogin;
     // End of variables declaration//GEN-END:variables
 }
