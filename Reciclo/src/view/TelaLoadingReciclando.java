@@ -22,6 +22,9 @@ public class TelaLoadingReciclando extends javax.swing.JFrame {
         }
         initComponents();
         TelaGeradoPontosView pontos = new TelaGeradoPontosView();
+
+        TelaRecicladoNaoAluno reciclado = new TelaRecicladoNaoAluno();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -37,6 +40,30 @@ public class TelaLoadingReciclando extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         new Thread(){
             public void run (){
+
+                if (AlunoLoginView.infotela == "NaoAluno")
+                {
+                     try {
+                    for(int i=0; i<101; i++){
+                    Thread.sleep(60);
+                    ProgressBar.setValue(i);
+                    if(ProgressBar.getValue() <=25){
+                        lblStatus.setText("Reciclando...");
+                    
+                    }
+                    else if (ProgressBar.getValue()<=50){
+                        lblStatus.setText("Aguarde...");
+                    }
+                        }
+                    dispose();
+                    reciclado.setVisible(true);
+                    }catch(InterruptedException ex){
+               
+                    }
+                }
+                else
+                {
+
                 try {
                     for(int i=0; i<101; i++){
                     Thread.sleep(60);
@@ -48,13 +75,15 @@ public class TelaLoadingReciclando extends javax.swing.JFrame {
                     else if (ProgressBar.getValue()<=50){
                         lblStatus.setText("Gerando seus pontos, aguarde...");
                     }
-                }
+
+                        }
                     dispose();
                     pontos.setVisible(true);
-            }catch(InterruptedException ex){
+                    }catch(InterruptedException ex){
                
-            }
-                
+                    }
+                }
+
         }
     }.start();
  

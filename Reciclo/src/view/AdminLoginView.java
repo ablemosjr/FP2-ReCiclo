@@ -164,6 +164,10 @@ public class AdminLoginView extends javax.swing.JFrame {
         
         testConnection.setText("");
         
+        AdminHistoryView homeAdmin = new AdminHistoryView();
+        
+        testConnection.setText("");
+        
         try {   
             // Fazer abrir conexao com bd aqui e processos
             
